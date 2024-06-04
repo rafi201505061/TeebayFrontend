@@ -1,0 +1,96 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --Black: #253748;
+  --Gray: #6f8294;
+  --Blue: #004fff;
+  --DarkBlue: #003abb;
+  --Red: #d92020;
+  --DarkRed: #bb1c1c;
+  --OffBlue: #ebf0ff;
+  --OffWhite: #e6eaed;
+  --OffWhite40: #f5f7f8;
+  --OffWhite60: #eff2f4;
+  --OffWhite80: #ebeef1;
+}
+
+h1 {
+  color: var(--Black);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0px;
+  padding: 0px;
+}
+
+a {
+  font-weight: 500;
+  color: var(--Blue);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--DarkBlue);
+}
+
+body,
+html {
+  margin: 0px;
+  display: block;
+  padding: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  background: white;
+  color: var(--Black);
+}
+.ant-btn {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  height: 34px;
+}
+.ant-btn-primary.ant-btn {
+  background: var(--Blue);
+}
+
+.ant-btn-primary.ant-btn:hover {
+  background: var(--DarkBlue) !important;
+}
+
+.ant-btn-background-ghost.link-button {
+  padding: 0px !important;
+  color: var(--Blue);
+  font-size: 14px;
+  font-weight: 500;
+  border: 0px !important;
+}
+
+.ant-btn-background-ghost.link-button:hover,
+.ant-btn-background-ghost.link-button:focus,
+.ant-btn-background-ghost.link-button:focus-visible,
+.ant-btn-background-ghost.link-button:active {
+  padding: 0px !important;
+  color: var(--DarkBlue) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  border: 0px !important;
+  box-shadow: unset !important;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
