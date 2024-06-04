@@ -17,13 +17,7 @@
   max-width: 500px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (width<=768px) {
+@media screen and (width<=425px) {
   .container {
     padding: 20px;
   }

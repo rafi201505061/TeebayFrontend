@@ -20,9 +20,9 @@
 }
 
 .ant-input.custom-input:focus,
+.ant-input.custom-input:active,
 .ant-input.custom-input:focus-visible,
-.ant-input-affix-wrapper.custom-input:focus,
-.ant-input-affix-wrapper.custom-input:focus-visible {
+.ant-input-affix-wrapper-focused.custom-input {
   border: 1px solid var(--Blue) !important;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
 }
@@ -30,6 +30,11 @@
 .ant-input.custom-input::placeholder,
 .ant-input-affix-wrapper.custom-input input::placeholder {
   color: var(--Gray) !important;
+}
+
+.custom-input-error.ant-input.custom-input,
+.ant-input-affix-wrapper.custom-input.custom-input-error {
+  border: 1px solid var(--Red) !important;
 }
 
 .error-text {

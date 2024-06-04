@@ -1,0 +1,19 @@
+.multi-input-container {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.multi-input-container > div {
+  flex: 1;
+}
+
+@media screen and (width<=425px) {
+  .multi-input-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .multi-input-container > div {
+    width: 100%;
+  }
+}

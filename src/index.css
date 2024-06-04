@@ -20,11 +20,21 @@
   --OffWhite40: #f5f7f8;
   --OffWhite60: #eff2f4;
   --OffWhite80: #ebeef1;
+  --Green: #29ab5d;
+  --DarkGreen: #259451;
+  --toastify-color-error: var(--Red) !important;
+  --toastify-icon-color-error: var(--Red) !important;
+  --toastify-color-progress-error: var(--Red) !important;
+  --toastify-icon-color-success: var(--Green) !important;
+  --toastify-color-progress-success: var(--Green) !important;
+  --toastify-icon-color-info: var(--Blue) !important;
+  --toastify-color-progress-info: var(--Blue) !important;
+  --toastify-color-progress-bgo: 0.5 !important;
 }
 
 h1 {
   color: var(--Black);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   margin: 10px 0px;
   padding: 0px;
@@ -81,6 +91,20 @@ html {
   font-weight: 500 !important;
   border: 0px !important;
   box-shadow: unset !important;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  margin: 0px !important;
+}
+
+.Toastify__toast-body > div:last-child {
+  color: var(--Black) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
 }
 @media (prefers-color-scheme: light) {
   :root {
