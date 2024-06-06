@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 0px 32px;
+  align-items: center;
+  border-bottom: 1px solid var(--OffWhite);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: white;
+  height: 68px;
+}
+
+.link-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}

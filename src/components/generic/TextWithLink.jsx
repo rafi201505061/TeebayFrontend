@@ -1,13 +1,11 @@
 /* eslint-disable react/prop-types */
-import { Button } from "antd";
 import styles from "./css/text-with-link.module.css";
-const TextWithLink = ({ title = "", linkTitle = "", onClick = () => {} }) => {
+import { NavLink } from "react-router-dom";
+const TextWithLink = ({ title = "", linkTitle = "", to = "" }) => {
   return (
     <div className={styles["container"]}>
       <p className={styles["title"]}>{title}</p>
-      <Button ghost type="default" className={"link-button"} onClick={onClick}>
-        {linkTitle}
-      </Button>
+      <NavLink to={to}>{linkTitle}</NavLink>
     </div>
   );
 };

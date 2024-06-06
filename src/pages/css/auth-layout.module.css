@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -19,10 +19,12 @@
 
 @media screen and (width<=425px) {
   .container {
-    padding: 20px;
+    padding: 16px;
   }
   .content-wrapper {
     width: 100%;
     border: 0px;
+    max-width: unset;
+    padding: 40px 0px;
   }
 }

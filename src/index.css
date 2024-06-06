@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  box-sizing: border-box;
 
   color-scheme: light dark;
 
@@ -34,11 +35,27 @@
 
 h1 {
   color: var(--Black);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   margin: 10px 0px;
   padding: 0px;
 }
+h2 {
+  color: var(--Black);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0px;
+}
+h4 {
+  color: var(--Black);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+}
+/* div{
+  display: -webkit-box;
+} */
 
 a {
   font-weight: 500;
@@ -59,11 +76,16 @@ html {
   background: white;
   color: var(--Black);
 }
+div {
+  box-sizing: border-box !important;
+}
 .ant-btn {
   color: white;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   height: 34px;
+  display: flex;
+  align-items: center;
 }
 .ant-btn-primary.ant-btn {
   background: var(--Blue);
@@ -92,13 +114,83 @@ html {
   border: 0px !important;
   box-shadow: unset !important;
 }
+.ant-btn-primary.ant-btn-dangerous {
+  background: var(--Red) !important;
+}
+.ant-btn-primary.ant-btn-dangerous:hover,
+.ant-btn-primary.ant-btn-dangerous:focus,
+.ant-btn-primary.ant-btn-dangerous:focus-visible,
+.ant-btn-primary.ant-btn-dangerous:active {
+  background: var(--DarkRed) !important;
+}
+
+.ant-btn-primary.ant-btn[disabled] {
+  background: var(--Gray) !important;
+  color: white !important;
+}
+
+.ant-btn-sm.ant-btn-icon-only.ant-btn-round.danger-icon-button {
+  padding: 0px !important;
+  height: 34px !important;
+  width: 34px !important;
+  border-radius: 34px !important;
+  background: transparent !important;
+  border: 1px solid var(--Red) !important;
+  color: var(--Red) !important;
+}
+.ant-btn-sm.ant-btn-icon-only.ant-btn-round.danger-icon-button:hover {
+  background: var(--Red) !important;
+  color: white !important;
+}
+
+.ant-btn-sm.ant-btn-icon-only.ant-btn-round.normal-icon-button {
+  padding: 0px !important;
+  height: 34px !important;
+  width: 34px !important;
+  border-radius: 34px !important;
+  background: transparent !important;
+  border: 1px solid var(--Blue) !important;
+  color: var(--Blue) !important;
+}
+.ant-btn-sm.ant-btn-icon-only.ant-btn-round.normal-icon-button:hover {
+  background: var(--Blue) !important;
+  color: white !important;
+}
+
+.ant-btn.ant-btn-default {
+  color: var(--Gray) !important;
+  border: 1px solid var(--Gray) !important;
+}
+
+.ant-btn.ant-btn-default:hover {
+  color: var(--Blue) !important;
+  border: 1px solid var(--Blue) !important;
+}
+
+.ant-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ant-typography-collapse,
+.ant-typography-expand {
+  color: var(--Blue) !important;
+}
+.ant-typography-collapse:hover,
+.ant-typography-expand:hover {
+  color: var(--DarkBlue) !important;
+}
 p {
-  margin: 0px !important;
+  margin: 0px;
 }
 
 .Toastify__toast-body > div:last-child {
@@ -117,4 +209,44 @@ p {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.secondary-text {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--Gray);
+}
+
+.description-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--Black);
+  margin: 10px 0px;
+}
+
+.ant-select {
+  height: 36px !important;
+}
+
+.ant-select .ant-select-selector {
+  border: 1px solid var(--OffWhite) !important;
+  color: var(--Black) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  height: 36px !important;
+  box-shadow: unset !important;
+}
+
+.ant-select .ant-select-selector:hover {
+  border: 1px solid var(--Blue) !important;
+}
+
+.ant-select-selection-placeholder {
+  color: var(--Gray) !important;
+}
+.ant-select-selector:focus,
+.ant-select-selector:active,
+.ant-select-selector:focus-visible {
+  border: 1px solid var(--Blue) !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
 }

@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.content-container {
+  padding: 32px;
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (width<=425px) {
+  .content-container {
+    padding: 16px;
+  }
+}

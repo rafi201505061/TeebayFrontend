@@ -1,13 +1,15 @@
 import { Button } from "antd";
 import PasswordInput from "../components/inputs/PasswordInput";
 import TextInput from "../components/inputs/TextInput";
-import AuthLayout from "./AuthLayout";
+import AuthLayout from "./layouts/AuthLayout";
 import styles from "./css/sign-up.module.css";
 import { AuthService } from "../services/auth-service";
 import { useMemo, useReducer, useState } from "react";
 import { SignUpUtils } from "./utils/sign-up-utils";
 import { CommonUtils } from "../utils/common-utils";
 import { TOAST_TYPE } from "../enums/toast-type";
+import TextWithLink from "../components/generic/TextWithLink";
+import { useNavigate } from "react-router-dom";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -21,6 +23,7 @@ const SignUpScreen = () => {
   const [state, dispatch] = useReducer(reducer, SignUpUtils.INITIAL_STATE);
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState(false);
+  const navigate = useNavigate();
 
   const updateState = (partialState) => {
     dispatch({ type: "update-state", payload: partialState });
@@ -35,12 +38,10 @@ const SignUpScreen = () => {
       }
       await AuthService.signUp({ ...state });
       setLoading(false);
+      navigate("/login", { replace: true });
     } catch (error) {
       setLoading(false);
-      CommonUtils.showToast(
-        TOAST_TYPE.ERROR,
-        error?.message ?? "Couldn't add you. Please try again."
-      );
+      CommonUtils.showToast(TOAST_TYPE.ERROR, error?.message);
     }
   };
   const isEmailValid = useMemo(() => {
@@ -51,7 +52,7 @@ const SignUpScreen = () => {
     return CommonUtils.isPhoneNumberValid(state.phoneNo);
   }, [state.phoneNo]);
   return (
-    <AuthLayout>
+    <AuthLayout title="Sign Up">
       <div className={styles["multi-input-container"]}>
         <div>
           <TextInput
@@ -117,6 +118,14 @@ const SignUpScreen = () => {
         <Button loading={loading} type="primary" onClick={handleSignUp}>
           Sign Up
         </Button>
+      </div>
+
+      <div className={"center"}>
+        <TextWithLink
+          title="Already have an account?"
+          linkTitle="Sign In"
+          to="/login"
+        />
       </div>
     </AuthLayout>
   );

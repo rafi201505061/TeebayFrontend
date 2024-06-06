@@ -8,6 +8,7 @@ const TextInput = ({
   onChange = () => {},
   error = false,
   errorMessage = "",
+  onEnter = () => {},
 }) => {
   return (
     <div className="custom-input-wrapper">
@@ -15,6 +16,11 @@ const TextInput = ({
         value={value}
         onChange={(e) => {
           onChange(e.target.value);
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && typeof onEnter === "function") {
+            onEnter(value);
+          }
         }}
         className={classNames({
           "custom-input": true,
